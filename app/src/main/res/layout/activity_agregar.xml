@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    tools:context=".Agregar_Gasto">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/agregar_gasto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="15dp"
+                android:text="Agregar gasto"
+                android:textSize="30sp"
+                />
+
+
+            <EditText
+                android:id="@+id/edit_fecha"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/agregar_gasto"
+                android:ems="10"
+                android:inputType="date"
+                android:digits="1234567890/"/>
+
+            <Button
+                android:id="@+id/button_hoy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/agregar_gasto"
+                android:layout_alignParentRight="true"
+                android:text="Calendario" />
+
+            <Spinner
+                android:id="@+id/idspinnercombogastos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/button_hoy" />
+
+            <EditText
+                android:id="@+id/edit_importe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/idspinnercombogastos"
+                android:ems="10"
+                android:hint="$"
+                android:inputType="numberDecimal"
+                android:maxLength="6"/>
+
+            <ImageView
+                android:id="@+id/idimagenfactura"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:layout_below="@id/edit_importe" />
+
+            <ImageButton
+                android:id="@+id/idopencamara"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/idimagenfactura"
+                app:srcCompat="@android:drawable/ic_menu_camera" />
+
+            <Button
+                android:id="@+id/btn_registrar_gasto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/idopencamara"
+                android:layout_centerHorizontal="true"
+                android:onClick="BotonRegistrarGastos"
+                android:text="Registrar Gasto"
+
+                />
+
+
+        </RelativeLayout>
+
+
+    </ScrollView>
+
+
+</RelativeLayout>

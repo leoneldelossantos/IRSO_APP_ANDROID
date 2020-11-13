@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imagen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/gastos"
+        android:layout_centerHorizontal="true"
+
+        />
+
+
+    <EditText
+        android:id="@+id/edit_dni"
+        android:layout_width="338dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imagen"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="20dp"
+        android:gravity="center"
+        android:hint="Ingrese DNI..."
+        android:inputType="phone"
+        android:maxLength="9"
+        android:digits="1234567890"
+        android:textSize="20sp" />
+
+
+
+    <EditText
+        android:id="@+id/edit_pass"
+        android:layout_width="344dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edit_dni"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="15dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:hint="Ingrese contraseña..."
+        android:inputType="textPassword"
+        android:textSize="20sp"
+        android:maxLength="10"/>
+
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edit_pass"
+        android:layout_marginHorizontal="50dp"
+        android:layout_marginTop="25dp"
+        android:gravity="center"
+        android:text="Login"
+        android:onClick="BotonLogin"/>
+
+    <Button
+        android:id="@+id/btn_registrar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn_login"
+        android:layout_marginHorizontal="50dp"
+        android:layout_marginTop="25dp"
+        android:gravity="center"
+        android:onClick="Registrar"
+        android:text="Registrar" />
+
+
+
+
+</RelativeLayout>

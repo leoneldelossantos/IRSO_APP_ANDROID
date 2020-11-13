@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    tools:context=".Reporte_Gasto">>
+
+
+    <TextView
+        android:id="@+id/reportes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="15dp"
+        android:text="Reporte"
+        android:textSize="30sp" />
+
+    <ListView
+        android:id="@+id/lista_gastos"
+        android:layout_width="wrap_content"
+        android:layout_height="400dp"
+        android:layout_below="@id/reportes"
+        ></ListView>
+
+    <Button
+        android:id="@+id/btn_sendmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/lista_gastos"
+        android:text="Genera archivo CSV "
+        android:onClick="GenerarCSV"
+        android:gravity="center"
+        />
+
+
+
+
+</RelativeLayout>
